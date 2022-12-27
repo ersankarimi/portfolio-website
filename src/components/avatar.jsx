@@ -8,7 +8,7 @@ export default function Avatar({ isLink, extraClassName }) {
     return (
       <Link href="/" className={`flex items-center gap-2 ${extraClassName}`}>
         <Image src={avatar} alt="Ersan Avatar" />
-        <h1 className="font-bold ">Ersan</h1>
+        <h1 className="font-bold">Ersan</h1>
       </Link>
     );
   }
@@ -16,7 +16,7 @@ export default function Avatar({ isLink, extraClassName }) {
   return (
     <div className={`flex items-center gap-2 ${extraClassName}`}>
       <Image src={avatar} alt="Ersan Avatar" />
-      <h1 className="font-bold ">Ersan</h1>
+      <h1 className="font-bold">Ersan</h1>
     </div>
   );
 }
