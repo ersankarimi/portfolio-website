@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }) {
     <RootLayout>
       <Head>
         <title>Home | Ersan Karimi Portfolio&apos;s</title>
+        <link rel="shortcut icon" href="/avatar.svg" />
       </Head>
       <Component {...pageProps} />
     </RootLayout>
