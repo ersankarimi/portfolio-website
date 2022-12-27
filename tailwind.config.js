@@ -1,10 +1,12 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-extraneous-dependencies */
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
   content: ["./src/pages/**/*.{js,jsx}", "./src/components/**/*.{js,jsx}"],
   theme: {
     screens: {
-      xs: "320px",
+      xs: "375px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
