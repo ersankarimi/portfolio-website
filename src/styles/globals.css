@@ -1,8 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-brand-background-500 text-brand-foreground-500 font-jetbrains-mono;
+  }
   #__next {
     @apply flex flex-col min-h-screen;
   }
