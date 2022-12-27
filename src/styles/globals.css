@@ -16,4 +16,10 @@
   main {
     @apply flex-grow;
   }
+
+  header,
+  main,
+  footer {
+    @apply px-6 py-3;
+  }
 }
