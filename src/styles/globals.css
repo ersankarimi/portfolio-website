@@ -5,13 +5,13 @@
 
 @layer base {
   body {
-    @apply bg-brand-background-500 text-brand-foreground-500 font-jetbrains-mono;
+    @apply bg-brand-background-500 font-jetbrains-mono text-brand-foreground-500;
   }
   #__next {
-    @apply flex flex-col min-h-screen;
+    @apply flex min-h-screen flex-col;
   }
   header {
-    @apply sticky top-0 z-30;
+    @apply sticky top-0 z-30 bg-brand-background-500/90 backdrop-blur-sm;
   }
   main {
     @apply flex-grow;
