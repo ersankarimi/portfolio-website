@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply bg-brand-background-500 font-jetbrains-mono text-brand-foreground-500;
+    @apply overflow-x-hidden bg-brand-background-500 font-jetbrains-mono text-brand-foreground-500;
   }
   #__next {
     @apply flex min-h-screen flex-col;
@@ -14,12 +14,12 @@
     @apply sticky top-0 z-30 bg-brand-background-500/90 backdrop-blur-sm;
   }
   main {
-    @apply flex-grow;
+    @apply h-[311vh];
   }
 
   header,
   main,
   footer {
-    @apply px-6 py-3;
+    @apply px-5 py-3 xs:px-6 md:container md:m-auto;
   }
 }
