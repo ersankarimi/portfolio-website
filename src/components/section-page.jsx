@@ -1,6 +1,10 @@
-export default function SectionPage({ children }) {
+export default function SectionPage({ children, forHeroSection }) {
   return (
-    <section className="flex justify-center items-start flex-col gap-8 mt-8">
+    <section
+      className={`flex flex-col items-start justify-center gap-8 ${
+        forHeroSection ? "mt-8" : "mt-16"
+      }`}
+    >
       {children}
     </section>
   );
