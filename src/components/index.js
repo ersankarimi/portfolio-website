@@ -1,4 +1,6 @@
+import Avatar from "./avatar";
 import RootLayout from "./root-layout";
+import SectionPage from "./section-page";
+import SectionTitle from "./section-title";
 
-// eslint-disable-next-line import/prefer-default-export
-export { RootLayout };
+export { RootLayout, Avatar, SectionPage, SectionTitle };
