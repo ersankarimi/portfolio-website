@@ -58,7 +58,7 @@ export default function Home({ skills }) {
       </SectionPage>
 
       <SectionPage>
-        <SectionTitle title="Skills" />
+        <SectionTitle title="skills" />
         <div className="flex flex-wrap items-center gap-4">
           {skills.map((skill) => (
             <BadgeSkill skill={skill} key={skill} />
