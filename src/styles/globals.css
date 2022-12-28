@@ -14,7 +14,7 @@
     @apply sticky top-0 z-30 bg-brand-background-500/90 backdrop-blur-sm;
   }
   main {
-    @apply h-[311vh];
+    @apply flex-grow;
   }
 
   header,
