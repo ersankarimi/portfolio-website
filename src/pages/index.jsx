@@ -2,10 +2,17 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+import greenpeaceCover from "../../public/greenpeace-cover.png";
+import halobukuCover from "../../public/halobuku-cover.png";
 import heroSM from "../../public/hero-sm.png";
-import { SectionPage, SectionTitle, BadgeSkill } from "../components";
+import {
+  SectionPage,
+  SectionTitle,
+  BadgeSkill,
+  ProjectCard,
+} from "../components";
 
-export default function Home({ skills }) {
+export default function Home({ skills, projects }) {
   return (
     <>
       <Head>
@@ -67,6 +74,11 @@ export default function Home({ skills }) {
       </SectionPage>
       <SectionPage>
         <SectionTitle title="projects" />
+        <div className="grid gap-8">
+          {projects.map((project) => (
+            <ProjectCard {...project} key={project.title} />
+          ))}
+        </div>
       </SectionPage>
     </>
   );
@@ -88,6 +100,33 @@ export async function getStaticProps() {
         "GitHub",
         "Figma",
         "Framer Motion",
+      ],
+      projects: [
+        {
+          title: "Greenpeace",
+          description:
+            "An organization that works to protect the environment and human rights is called Greenpeace. We, the FE-14 team, received a Challenge Partner from Greenpeace to build a website that can assist them in resolving conflicts and other concerns at the Kampus Merdeka's Studi Independen Program in Skilvul.",
+          image: greenpeaceCover,
+          demo: "https://greenpeace.netlify.app",
+          github: "https://github.com/FE-14/greenpeace-frontend",
+          technologies: [
+            "React",
+            "React Router",
+            "Redux",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "Framer Motion",
+          ],
+        },
+        {
+          title: "HaloBuku",
+          description:
+            "E-Commerce to buy various books such as novels, and others. This is the Front-End Web Development Bootcamp Codepolitan x Catamyst Batch #1 final project.",
+          image: halobukuCover,
+          demo: "https://halobuku.netlify.app",
+          github: "https://github.com/CrashTeamR/HaloBuku/",
+          technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+        },
       ],
     },
   };
