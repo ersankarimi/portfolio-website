@@ -66,7 +66,7 @@ export default function Home({ skills }) {
         </div>
       </SectionPage>
       <SectionPage>
-        <SectionTitle title="project" />
+        <SectionTitle title="projects" />
       </SectionPage>
     </>
   );
