@@ -17,6 +17,10 @@
     @apply flex-grow;
   }
 
+  footer {
+    @apply mt-12;
+  }
+
   header,
   main,
   footer {
