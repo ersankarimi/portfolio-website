@@ -10,9 +10,10 @@ import {
   SectionTitle,
   BadgeSkill,
   ProjectCard,
+  PostCard,
 } from "../components";
 
-export default function Home({ skills, projects }) {
+export default function Home({ skills, projects, posts }) {
   return (
     <>
       <Head>
@@ -82,6 +83,11 @@ export default function Home({ skills, projects }) {
       </SectionPage>
       <SectionPage>
         <SectionTitle title="posts" />
+        <div className="grid gap-8">
+          {posts.map((post) => (
+            <PostCard {...post} key={post.title} />
+          ))}
+        </div>
       </SectionPage>
     </>
   );
@@ -129,6 +135,24 @@ export async function getStaticProps() {
           demo: "https://halobuku.netlify.app",
           github: "https://github.com/CrashTeamR/HaloBuku/",
           technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+        },
+      ],
+      posts: [
+        {
+          type: "Youtube",
+          title: "HTML Tutorial",
+          description:
+            "In this video, I will share my knowledge of HTML. I will discuss a brief history of HTML, tags in HTML, attributes in HTML, and more.",
+          year: 2021,
+          link: "https://youtube.com/playlist?list=PLJ0buff7jNKOpAWlC_wnBV-N5Elkayk4b",
+        },
+        {
+          type: "Youtube",
+          title: "Extensions for Writing HTML Code",
+          description:
+            "In this video, I will share my used vscode extensions when writing the HTML code.",
+          year: 2021,
+          link: "https://youtube.com/playlist?list=PLJ0buff7jNKNf42GeLW-ucUrcOSZja5cy",
         },
       ],
     },
