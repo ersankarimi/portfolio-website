@@ -12,9 +12,10 @@ import {
   ProjectCard,
   PostCard,
   ViewMoreButton,
+  ContactLink,
 } from "../components";
 
-export default function Home({ skills, projects, posts }) {
+export default function Home({ skills, projects, posts, contacts }) {
   return (
     <>
       <Head>
@@ -94,6 +95,23 @@ export default function Home({ skills, projects, posts }) {
         </div>
         <ViewMoreButton to="/posts" />
       </SectionPage>
+
+      <SectionPage>
+        <SectionTitle title="contacts" />
+        <div className="flex flex-col gap-6">
+          <p>
+            On various social media, you may connect with me. Additionally, I
+            have a CV.
+          </p>
+          <div className="flex w-max flex-col gap-3 border-1 border-brand-foreground-700 p-4">
+            {contacts.map((contact) => (
+              <ContactLink {...contact} key={contact.platform} />
+            ))}
+          </div>
+        </div>
+
+        <ViewMoreButton to="/contacts" />
+      </SectionPage>
     </>
   );
 }
@@ -158,6 +176,40 @@ export async function getStaticProps() {
             "In this video, I will share my used vscode extensions when writing the HTML code.",
           year: 2021,
           link: "https://youtube.com/playlist?list=PLJ0buff7jNKNf42GeLW-ucUrcOSZja5cy",
+        },
+      ],
+      contacts: [
+        {
+          platform: "Email",
+          link: "mailto:ersankarimii311@gmail.com",
+        },
+        {
+          platform: "WhatsApp",
+          link: "https://api.whatsapp.com/send?phone=62895321660050",
+        },
+        {
+          platform: "Telegram",
+          link: "https://t.me/ersankarimi",
+        },
+        {
+          platform: "CV",
+          link: "https://read.cv/ersankarimi",
+        },
+        {
+          platform: "Github",
+          link: "https://github.com/ersankarimi",
+        },
+        {
+          platform: "Youtube",
+          link: "https://www.youtube.com/c/hajikoding",
+        },
+        {
+          platform: "Linkedin",
+          link: "https://www.linkedin.com/in/ersankarimi/",
+        },
+        {
+          platform: "Instagram",
+          link: "https://www.instagram.com/ersankarimi/",
         },
       ],
     },
