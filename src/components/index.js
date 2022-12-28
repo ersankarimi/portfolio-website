@@ -1,5 +1,6 @@
 import Avatar from "./avatar";
 import BadgeSkill from "./badge-skill";
+import ContactLink from "./contact-link";
 import PostCard from "./post-card";
 import ProjectCard from "./project-card";
 import RootLayout from "./root-layout";
@@ -9,6 +10,7 @@ import ViewMoreButton from "./view-more-button";
 
 export {
   RootLayout,
+  ContactLink,
   ViewMoreButton,
   PostCard,
   ProjectCard,
