@@ -11,6 +11,7 @@ import {
   BadgeSkill,
   ProjectCard,
   PostCard,
+  ViewMoreButton,
 } from "../components";
 
 export default function Home({ skills, projects, posts }) {
@@ -73,6 +74,7 @@ export default function Home({ skills, projects, posts }) {
           ))}
         </div>
       </SectionPage>
+
       <SectionPage>
         <SectionTitle title="projects" />
         <div className="grid gap-8">
@@ -80,7 +82,9 @@ export default function Home({ skills, projects, posts }) {
             <ProjectCard {...project} key={project.title} />
           ))}
         </div>
+        <ViewMoreButton to="/skills" />
       </SectionPage>
+
       <SectionPage>
         <SectionTitle title="posts" />
         <div className="grid gap-8">
@@ -88,6 +92,7 @@ export default function Home({ skills, projects, posts }) {
             <PostCard {...post} key={post.title} />
           ))}
         </div>
+        <ViewMoreButton to="/posts" />
       </SectionPage>
     </>
   );
