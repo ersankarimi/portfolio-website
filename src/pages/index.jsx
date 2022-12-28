@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import heroSM from "../../public/hero-sm.png";
-import { SectionPage, SectionTitle } from "../components";
+import { SectionPage, SectionTitle, BadgeSkill } from "../components";
 
-export default function Home() {
+export default function Home({ skills }) {
   return (
     <>
       <Head>
@@ -53,13 +53,39 @@ export default function Home() {
         <picture className="relative m-auto rounded-full">
           <div className="absolute inset-0 -z-10 rounded-full bg-linear-primary blur-3xl" />
           <source srcSet={heroSM.src} media="(min-width:520px)" />
-          <Image src={heroSM} alt="Hero SM" />
+          <Image src={heroSM} alt="Hero SM" priority />
         </picture>
       </SectionPage>
 
       <SectionPage>
         <SectionTitle title="Skills" />
+        <div className="flex flex-wrap items-center gap-4">
+          {skills.map((skill) => (
+            <BadgeSkill skill={skill} key={skill} />
+          ))}
+        </div>
       </SectionPage>
     </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "React Router",
+        "Next.js",
+        "Tailwind CSS",
+        "Bootstrap",
+        "Git",
+        "GitHub",
+        "Figma",
+        "Framer Motion",
+      ],
+    },
+  };
 }
