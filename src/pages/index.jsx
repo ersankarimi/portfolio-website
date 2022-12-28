@@ -65,6 +65,9 @@ export default function Home({ skills }) {
           ))}
         </div>
       </SectionPage>
+      <SectionPage>
+        <SectionTitle title="project" />
+      </SectionPage>
     </>
   );
 }
