@@ -80,6 +80,9 @@ export default function Home({ skills, projects }) {
           ))}
         </div>
       </SectionPage>
+      <SectionPage>
+        <SectionTitle title="posts" />
+      </SectionPage>
     </>
   );
 }
