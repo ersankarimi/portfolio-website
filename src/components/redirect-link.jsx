@@ -7,12 +7,14 @@ export default function RedirectLink({
   type = "default",
   to,
   target = "_self",
+  extraClassname = "",
 }) {
   return (
     <Link
       href={to}
       className={classNames(
         "flex w-max items-center gap-2 border-1 px-4 py-2 duration-200",
+        extraClassname,
         {
           "text-sm font-light text-brand-foreground-600 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 md:text-base":
             type !== "view-more",
