@@ -2,7 +2,12 @@ import classNames from "classnames";
 import Link from "next/link";
 import { MdUnfoldMore } from "react-icons/md";
 
-export default function RedirectLink({ children, type = "default", to }) {
+export default function RedirectLink({
+  children,
+  type = "default",
+  to,
+  target = "_self",
+}) {
   return (
     <Link
       href={to}
@@ -19,6 +24,8 @@ export default function RedirectLink({ children, type = "default", to }) {
             type === "view-more",
         }
       )}
+      target={target}
+      rel={target === "_blank" ? "noopener noreferrer" : ""}
     >
       {type === "view-more" ? (
         <>
