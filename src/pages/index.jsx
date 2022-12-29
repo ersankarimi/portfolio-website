@@ -24,7 +24,7 @@ export default function Home({ skills, projects, posts, contacts }) {
       <SectionPage forHeroSection>
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-[22px] font-bold xs:text-2xl">
               Hi, I&apos;m&nbsp;
               <span className="text-brand-purple-500">Ersan Karimi</span>
             </h1>
