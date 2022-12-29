@@ -51,7 +51,7 @@ function ProjectCardLink({ children, isDemoButton, to }) {
   return (
     <Link
       className={classNames(
-        "flex items-center gap-2 border-1 px-4 py-2 text-base font-light text-brand-foreground-600 duration-200 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 md:text-base",
+        "flex items-center gap-2 border-1 px-4 py-2 text-sm font-light text-brand-foreground-600 duration-200 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 md:text-base",
         {
           "border-brand-purple-700 hover:border-brand-purple-500 hover:text-brand-purple-500":
             isDemoButton,
