@@ -52,12 +52,9 @@ export default function Home({ skills, projects, posts, contacts }) {
             </Link>
             .
           </p>
-          <button
-            type="button"
-            className="mt-3 w-max border-1 border-brand-purple-600 px-4 py-[6px] text-sm font-light duration-200 hover:border-brand-purple-500 hover:bg-brand-selection-500/40 hover:text-cyan-500"
-          >
+          <RedirectLink to="/about" type="demo" extraClassname="mt-3">
             #about-me
-          </button>
+          </RedirectLink>
         </div>
 
         <picture className="relative m-auto rounded-full">
