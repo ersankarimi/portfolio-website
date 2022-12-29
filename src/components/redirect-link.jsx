@@ -7,7 +7,7 @@ export default function RedirectLink({ children, type = "default", to }) {
     <Link
       href={to}
       className={classNames(
-        "flex items-center gap-2 border-1 px-4 py-2 duration-200",
+        "flex w-max items-center gap-2 border-1 px-4 py-2 duration-200",
         {
           "text-sm font-light text-brand-foreground-600 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 md:text-base":
             type !== "view-more",
@@ -15,7 +15,7 @@ export default function RedirectLink({ children, type = "default", to }) {
             type === "default",
           "border-brand-purple-700 hover:border-brand-purple-500 hover:text-brand-purple-400":
             type === "demo",
-          "mx-auto my-4 border-brand-foreground-600 bg-brand-selection-600/60 hover:bg-brand-selection-600":
+          "mx-auto my-4 border-brand-foreground-600 bg-brand-cyan-500/[8%] text-brand-cyan-500 hover:bg-brand-cyan-500/[13%]":
             type === "view-more",
         }
       )}
