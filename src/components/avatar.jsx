@@ -6,7 +6,10 @@ import avatar from "../../public/avatar.svg";
 export default function Avatar({ isLink, extraClassName }) {
   if (isLink) {
     return (
-      <Link href="/" className={`flex items-center gap-2 ${extraClassName}`}>
+      <Link
+        href="/"
+        className={`flex items-center gap-2 ${extraClassName} duration-200 hover:text-brand-purple-500`}
+      >
         <Image src={avatar} alt="Ersan Avatar" />
         <h1 className="font-bold">Ersan</h1>
       </Link>
@@ -14,7 +17,9 @@ export default function Avatar({ isLink, extraClassName }) {
   }
 
   return (
-    <div className={`flex items-center gap-2 ${extraClassName}`}>
+    <div
+      className={`flex items-center gap-2 ${extraClassName} duration-200 hover:text-brand-purple-500`}
+    >
       <Image src={avatar} alt="Ersan Avatar" />
       <h1 className="font-bold">Ersan</h1>
     </div>
