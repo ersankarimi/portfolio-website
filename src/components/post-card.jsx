@@ -20,17 +20,11 @@ export default function PostCard({ title, description, link, year, type }) {
 
         <Link
           href={link}
-          className="w-max border-1 border-brand-foreground-700 px-4 py-2 text-brand-foreground-600 duration-200 hover:bg-brand-selection-500/50 hover:text-brand-cyan-500"
+          className="flex w-max items-center gap-2 border-1 border-brand-foreground-700 px-4 py-2 font-light text-brand-foreground-600 duration-200 hover:bg-brand-selection-500/50 hover:text-brand-cyan-500"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button
-            type="button"
-            className="flex items-center gap-2 font-light"
-            tabIndex={-1}
-          >
-            Check this out <MdKeyboardArrowRight className="h-5 w-5" />
-          </button>
+          Check this out <MdKeyboardArrowRight className="h-5 w-5" />
         </Link>
       </div>
     </article>
