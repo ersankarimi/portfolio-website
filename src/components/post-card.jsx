@@ -3,7 +3,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function PostCard({ title, description, link, year, type }) {
   return (
-    <div className="flex flex-col border-1 border-brand-foreground-700">
+    <article className="flex flex-col border-1 border-brand-foreground-700">
       <div className="border-b-1 border-current bg-brand-selection-600/60 px-4 py-1">
         <h3 className="text-sm font-medium text-brand-foreground-600/90">
           {type}
@@ -33,6 +33,6 @@ export default function PostCard({ title, description, link, year, type }) {
           </button>
         </Link>
       </div>
-    </div>
+    </article>
   );
 }
