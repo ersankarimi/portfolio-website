@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { MdLanguage } from "react-icons/md";
@@ -12,7 +13,7 @@ export default function ProjectCard({
   technologies,
 }) {
   return (
-    <div className="flex flex-col border-2 border-brand-foreground-700">
+    <article className="flex flex-col border-2 border-brand-foreground-700">
       <picture>
         <Image src={image} alt={`${title} Cover`} />
       </picture>
@@ -24,15 +25,15 @@ export default function ProjectCard({
               <p className="text-sm text-brand-foreground-700">{description}</p>
             </div>
             <div className="flex items-center gap-4">
-              <ButtonProjectCard isDemoButton href={demo}>
+              <ProjectCardLink isDemoButton to={demo}>
                 <MdLanguage className="h-5 w-5" />
                 Demo
-              </ButtonProjectCard>
+              </ProjectCardLink>
 
-              <ButtonProjectCard href={github}>
+              <ProjectCardLink to={github}>
                 <SiGithub className="h-5 w-5" />
                 Github
-              </ButtonProjectCard>
+              </ProjectCardLink>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -42,29 +43,27 @@ export default function ProjectCard({
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
-function ButtonProjectCard({ children, isDemoButton, href }) {
+function ProjectCardLink({ children, isDemoButton, to }) {
   return (
     <Link
-      className="text-base font-light text-brand-foreground-600"
+      className={classNames(
+        "flex items-center gap-2 border-1 px-4 py-2 text-base font-light text-brand-foreground-600 duration-200 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 md:text-base",
+        {
+          "border-brand-purple-700 hover:border-brand-purple-500 hover:text-brand-purple-500":
+            isDemoButton,
+          "border-brand-foreground-700 hover:border-brand-foreground-500 hover:text-cyan-500":
+            !isDemoButton,
+        }
+      )}
       target="_blank"
       rel="noopener noreferrer"
-      href={href}
+      href={to}
     >
-      <button
-        tabIndex={-1}
-        type="button"
-        className={`flex items-center gap-2 border-1 px-4 py-2 text-sm duration-200 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 md:text-base ${
-          isDemoButton
-            ? "border-brand-purple-700 hover:border-brand-purple-500 hover:text-brand-purple-500"
-            : "border-brand-foreground-700 hover:border-brand-foreground-500 hover:text-cyan-500"
-        }`}
-      >
-        {children}
-      </button>
+      {children}
     </Link>
   );
 }
