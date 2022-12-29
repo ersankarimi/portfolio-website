@@ -175,7 +175,7 @@ export async function getStaticProps() {
           description:
             "In this video, I will share my used vscode extensions when writing the HTML code.",
           year: 2021,
-          link: "https://youtube.com/playlist?list=PLJ0buff7jNKNf42GeLW-ucUrcOSZja5cy",
+          link: "https://youtu.be/k4rthX766wQ",
         },
       ],
       contacts: [
