@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
+
+import RedirectLink from "./redirect-link";
 
 export default function PostCard({ title, description, link, year, type }) {
   return (
@@ -18,14 +19,9 @@ export default function PostCard({ title, description, link, year, type }) {
           <p className="text-sm text-brand-foreground-700">{description}</p>
         </div>
 
-        <Link
-          href={link}
-          className="flex w-max items-center gap-2 border-1 border-brand-foreground-700 px-4 py-2 font-light text-brand-foreground-600 duration-200 hover:bg-brand-selection-500/50 hover:text-brand-cyan-500"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <RedirectLink to={link}>
           Check this out <MdKeyboardArrowRight className="h-5 w-5" />
-        </Link>
+        </RedirectLink>
       </div>
     </article>
   );
