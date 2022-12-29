@@ -25,12 +25,12 @@ export default function ProjectCard({
               <p className="text-sm text-brand-foreground-700">{description}</p>
             </div>
             <div className="flex items-center gap-4">
-              <RedirectLink type="demo" to={demo}>
+              <RedirectLink type="demo" to={demo} target="_blank">
                 <MdLanguage className="h-5 w-5" />
                 Demo
               </RedirectLink>
 
-              <RedirectLink to={github}>
+              <RedirectLink to={github} target="_blank">
                 <SiGithub className="h-5 w-5" />
                 Github
               </RedirectLink>

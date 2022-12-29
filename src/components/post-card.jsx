@@ -19,7 +19,7 @@ export default function PostCard({ title, description, link, year, type }) {
           <p className="text-sm text-brand-foreground-700">{description}</p>
         </div>
 
-        <RedirectLink to={link}>
+        <RedirectLink to={link} target="_blank">
           Check this out <MdKeyboardArrowRight className="h-5 w-5" />
         </RedirectLink>
       </div>
