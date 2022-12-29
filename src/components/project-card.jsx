@@ -38,19 +38,16 @@ export default function ProjectCard({
           </div>
           <div className="flex flex-wrap items-center gap-2">
             {technologies.map((tech) => (
-              <ProjectCardTechBadge tech={tech} key={tech} />
+              <div
+                className="flex w-max cursor-default items-center border-1 border-brand-comment-400/60 px-2 py-[2px] text-xs font-light text-brand-comment-500"
+                key={tech}
+              >
+                {tech}
+              </div>
             ))}
           </div>
         </div>
       </div>
     </article>
-  );
-}
-
-function ProjectCardTechBadge({ tech }) {
-  return (
-    <div className="flex w-max cursor-default items-center border-1 border-brand-comment-400/60 px-2 py-[2px] text-xs font-light text-brand-comment-500">
-      {tech}
-    </div>
   );
 }
