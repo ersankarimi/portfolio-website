@@ -1,8 +1,8 @@
-import classNames from "classnames";
 import Image from "next/image";
-import Link from "next/link";
 import { MdLanguage } from "react-icons/md";
 import { SiGithub } from "react-icons/si";
+
+import RedirectLink from "./redirect-link";
 
 export default function ProjectCard({
   title,
@@ -25,15 +25,15 @@ export default function ProjectCard({
               <p className="text-sm text-brand-foreground-700">{description}</p>
             </div>
             <div className="flex items-center gap-4">
-              <ProjectCardLink isDemoButton to={demo}>
+              <RedirectLink type="demo" to={demo}>
                 <MdLanguage className="h-5 w-5" />
                 Demo
-              </ProjectCardLink>
+              </RedirectLink>
 
-              <ProjectCardLink to={github}>
+              <RedirectLink to={github}>
                 <SiGithub className="h-5 w-5" />
                 Github
-              </ProjectCardLink>
+              </RedirectLink>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -44,27 +44,6 @@ export default function ProjectCard({
         </div>
       </div>
     </article>
-  );
-}
-
-function ProjectCardLink({ children, isDemoButton, to }) {
-  return (
-    <Link
-      className={classNames(
-        "flex items-center gap-2 border-1 px-4 py-2 text-sm font-light text-brand-foreground-600 duration-200 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 md:text-base",
-        {
-          "border-brand-purple-700 hover:border-brand-purple-500 hover:text-brand-purple-500":
-            isDemoButton,
-          "border-brand-foreground-700 hover:border-brand-foreground-500 hover:text-cyan-500":
-            !isDemoButton,
-        }
-      )}
-      target="_blank"
-      rel="noopener noreferrer"
-      href={to}
-    >
-      {children}
-    </Link>
   );
 }
 
