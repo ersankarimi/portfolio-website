@@ -11,7 +11,7 @@ import {
   BadgeSkill,
   ProjectCard,
   PostCard,
-  ViewMoreButton,
+  RedirectLink,
   ContactLink,
 } from "../components";
 
@@ -83,7 +83,7 @@ export default function Home({ skills, projects, posts, contacts }) {
             <ProjectCard {...project} key={project.title} />
           ))}
         </div>
-        <ViewMoreButton to="/skills" />
+        <RedirectLink type="view-more" to="/skills" />
       </SectionPage>
 
       <SectionPage>
@@ -93,7 +93,7 @@ export default function Home({ skills, projects, posts, contacts }) {
             <PostCard {...post} key={post.title} />
           ))}
         </div>
-        <ViewMoreButton to="/posts" />
+        <RedirectLink type="view-more" to="/posts" />
       </SectionPage>
 
       <SectionPage>
@@ -110,7 +110,7 @@ export default function Home({ skills, projects, posts, contacts }) {
           </div>
         </div>
 
-        <ViewMoreButton to="/contacts" />
+        <RedirectLink type="view-more" to="/contacts" />
       </SectionPage>
     </>
   );
