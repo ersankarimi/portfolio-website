@@ -24,7 +24,7 @@ export default function Home({ skills, projects, posts, contacts }) {
       <SectionPage forHeroSection>
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-2">
-            <h1 className="text-xl font-bold">
+            <h1 className="text-2xl font-bold">
               Hi, I&apos;m&nbsp;
               <span className="text-brand-purple-500">Ersan Karimi</span>
             </h1>
@@ -38,7 +38,7 @@ export default function Home({ skills, projects, posts, contacts }) {
               <span className="text-brand-purple-500"> Student</span>.
             </h3>
           </div>
-          <p className="text-xs font-normal leading-relaxed text-brand-foreground-600">
+          <p className="text-sm font-normal leading-relaxed text-brand-foreground-600">
             Hi! I&apos;m currently studying Informatics at the Kalimantan
             Institute of Technology. I really enjoy Front-End Web Development
             and am excited to share my knowledge on my YouTube channel,&nbsp;

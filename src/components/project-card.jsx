@@ -20,7 +20,7 @@ export default function ProjectCard({
         <div className="flex flex-col gap-9">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-[14px]">
-              <h1 className="text-xl font-bold">{title}</h1>
+              <h3 className="text-xl font-semibold">{title}</h3>
               <p className="text-sm text-brand-foreground-700">{description}</p>
             </div>
             <div className="flex items-center gap-4">
@@ -57,7 +57,7 @@ function ButtonProjectCard({ children, isDemoButton, href }) {
       <button
         tabIndex={-1}
         type="button"
-        className={`flex items-center gap-2 border-1 px-4 py-2 duration-200 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 ${
+        className={`flex items-center gap-2 border-1 px-4 py-2 text-sm duration-200 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 md:text-base ${
           isDemoButton
             ? "border-brand-purple-700 hover:border-brand-purple-500 hover:text-brand-purple-500"
             : "border-brand-foreground-700 hover:border-brand-foreground-500 hover:text-cyan-500"
