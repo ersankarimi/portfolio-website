@@ -9,16 +9,21 @@ import {
 } from "react-icons/ri";
 import { SiGithub, SiYoutube } from "react-icons/si";
 
-export default function ContactLink({ platform, link }) {
+export default function ContactLink({
+  withText = true,
+  className = "",
+  platform,
+  link,
+}) {
   const iconsObject = {
-    email: <MdEmail />,
-    whatsapp: <RiWhatsappFill />,
-    telegram: <RiTelegramFill />,
-    instagram: <RiInstagramFill />,
-    linkedin: <RiLinkedinBoxFill />,
-    cv: <RiFileFill />,
-    github: <SiGithub />,
-    youtube: <SiYoutube />,
+    email: <MdEmail className={className} />,
+    whatsapp: <RiWhatsappFill className={className} />,
+    telegram: <RiTelegramFill className={className} />,
+    instagram: <RiInstagramFill className={className} />,
+    linkedin: <RiLinkedinBoxFill className={className} />,
+    cv: <RiFileFill className={className} />,
+    github: <SiGithub className={className} />,
+    youtube: <SiYoutube className={className} />,
   };
   return (
     <Link
@@ -26,7 +31,7 @@ export default function ContactLink({ platform, link }) {
       className="flex items-center gap-2 font-light text-brand-foreground-700 duration-200 hover:text-brand-purple-500"
     >
       {iconsObject[platform.toLowerCase()]}
-      {platform}
+      {withText && platform}
     </Link>
   );
 }
