@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,9 +9,16 @@ export default function Avatar({ isLink, extraClassName }) {
     return (
       <Link
         href="/"
-        className={`flex items-center gap-2 ${extraClassName} duration-200 hover:text-brand-purple-500`}
+        className={classNames(
+          "flex items-center gap-2 duration-200 hover:text-brand-purple-500 sm:text-lg",
+          extraClassName
+        )}
       >
-        <Image src={avatar} alt="Ersan Avatar" />
+        <Image
+          className="h-auto xs:w-7 sm:w-8"
+          src={avatar}
+          alt="Ersan Avatar"
+        />
         <h1 className="font-bold">Ersan</h1>
       </Link>
     );
@@ -18,9 +26,12 @@ export default function Avatar({ isLink, extraClassName }) {
 
   return (
     <div
-      className={`flex items-center gap-2 ${extraClassName} duration-200 hover:text-brand-purple-500`}
+      className={classNames(
+        "flex cursor-default items-center gap-2 duration-200 sm:text-lg",
+        extraClassName
+      )}
     >
-      <Image src={avatar} alt="Ersan Avatar" />
+      <Image className="h-auto xs:w-7 sm:w-8" src={avatar} alt="Ersan Avatar" />
       <h1 className="font-bold">Ersan</h1>
     </div>
   );

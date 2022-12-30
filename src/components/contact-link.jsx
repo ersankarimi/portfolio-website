@@ -28,7 +28,7 @@ export default function ContactLink({
   return (
     <Link
       href={link}
-      className="flex items-center gap-2 font-light text-brand-foreground-700 duration-200 hover:text-brand-purple-500"
+      className="flex items-center gap-2 font-light text-brand-foreground-700 duration-200 hover:text-brand-purple-500 xs:text-lg"
     >
       {iconsObject[platform.toLowerCase()]}
       {withText && platform}

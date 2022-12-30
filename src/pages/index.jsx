@@ -28,7 +28,7 @@ export default function Home({ skills, projects, posts, contacts }) {
               Hi, I&apos;m&nbsp;
               <span className="text-brand-purple-500">Ersan Karimi</span>
             </h1>
-            <h3 className="">
+            <h3 className="xs:text-lg">
               a&nbsp;
               <span className="text-brand-purple-500">
                 Front-End Web Developer
@@ -38,7 +38,7 @@ export default function Home({ skills, projects, posts, contacts }) {
               <span className="text-brand-purple-500"> Student</span>.
             </h3>
           </div>
-          <p className="text-sm font-normal leading-relaxed text-brand-foreground-600">
+          <p className="text-sm font-normal leading-relaxed text-brand-foreground-600/90 xs:text-base">
             Hi! I&apos;m currently studying Informatics at the Kalimantan
             Institute of Technology. I really enjoy Front-End Web Development
             and am excited to share my knowledge on my YouTube channel,&nbsp;
@@ -46,7 +46,7 @@ export default function Home({ skills, projects, posts, contacts }) {
               href="https://www.youtube.com/c/hajikoding"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-b-1 text-brand-foreground-600 hover:text-brand-foreground-500"
+              className="border-b-1 text-brand-foreground-600 duration-200 hover:text-brand-cyan-500"
             >
               Haji Koding
             </Link>
@@ -96,7 +96,7 @@ export default function Home({ skills, projects, posts, contacts }) {
       <SectionPage>
         <SectionTitle title="contacts" />
         <div className="flex flex-col gap-6">
-          <p>
+          <p className="xs:text-lg">
             On various social media, you may connect with me. Additionally, I
             have a CV.
           </p>

@@ -16,7 +16,11 @@ export default function RedirectLink({
         "flex w-max items-center gap-2 border-1 px-4 py-2 duration-200",
         extraClassname,
         {
-          "text-sm font-light text-brand-foreground-600 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500 md:text-base":
+          "text-sm xs:text-base": type !== "view-more",
+          "xs:text-lg": type === "view-more",
+        },
+        {
+          "font-light text-brand-foreground-600 hover:bg-brand-selection-500/50 hover:text-brand-foreground-500":
             type !== "view-more",
           "border-brand-foreground-700 hover:border-brand-foreground-500 hover:text-cyan-400":
             type === "default",
