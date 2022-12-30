@@ -11,7 +11,7 @@
     @apply flex min-h-screen flex-col;
   }
   header {
-    @apply sticky top-0 z-30 bg-brand-background-500/90 backdrop-blur-sm;
+    @apply sticky top-0 z-30 bg-brand-background-500/90 shadow-lg shadow-brand-purple-500/[5%] backdrop-blur-sm;
   }
   main {
     @apply flex-grow;
@@ -21,7 +21,7 @@
     @apply mt-12;
   }
 
-  header,
+  nav,
   main,
   footer {
     @apply px-5 py-3 xs:px-6 md:container md:m-auto;
