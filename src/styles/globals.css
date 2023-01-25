@@ -24,6 +24,6 @@
   nav,
   main,
   footer {
-    @apply px-5 py-3 xs:px-6 md:container md:m-auto;
+    @apply px-5 py-3 xs:px-6 md:container md:m-auto lg:max-w-5xl;
   }
 }
